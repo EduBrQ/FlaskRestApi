@@ -9,18 +9,18 @@ class CategoryResource(Resource):
     def get(self):
         categories = Category.query.all()
         categories = categories_schema.dump(categories).data
-        return {'status': 'success', 'data': categories}, 200
+        return {'status': 'sucesso', 'data': categories}, 200
     def post(self):
         json_data = request.get_json(force=True)
         if not json_data:
-               return {'message': 'No input data provided'}, 400
-        # Validate and deserialize input
+               return {'message': 'Nenhum dado de entrada fornecido'}, 400
+        # Validar e desserializar entrada
         data, errors = category_schema.load(json_data)
         if errors:
             return errors, 422
         category = Category.query.filter_by(name=data['name']).first()
         if category:
-            return {'message': 'Category already exists'}, 400
+            return {'message': 'Categoria já existe'}, 400
         category = Category(
             name=json_data['name']
             )
@@ -30,4 +30,4 @@ class CategoryResource(Resource):
 
         result = category_schema.dump(category).data
 
-        return { "status": 'success', 'data': result }, 201
+        return { "status": 'sucesso', 'data': result }, 201

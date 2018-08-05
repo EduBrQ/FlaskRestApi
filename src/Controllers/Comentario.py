@@ -10,19 +10,19 @@ class CommentResource(Resource):
     def get(self):
         comments = Comment.query.all()
         comments = comments_schema.dump(comments).data
-        return {"status":"success", "data":comments}, 200
+        return {"status":"sucesso", "data":comments}, 200
 
     def post(self):
         json_data = request.get_json(force=True)
         if not json_data:
-               return {'message': 'No input data provided'}, 400
-        # Validate and deserialize input
+               return {'message': 'Nenhum dado de entrada fornecido'}, 400
+        # Validar e desserializar entrada
         data, errors = comment_schema.load(json_data)
         if errors:
             return {"status": "error", "data": errors}, 422
         category_id = Category.query.filter_by(id=data['category_id']).first()
         if not category_id:
-            return {'status': 'error', 'message': 'comment category not found'}, 400
+            return {'status': 'error', 'message': 'categoria de comentário não encontrada'}, 400
         comment = Comment(
             category_id=data['category_id'], 
             comment=data['comment']
@@ -32,6 +32,6 @@ class CommentResource(Resource):
 
         result = comment_schema.dump(comment).data
 
-        return {'status': "success", 'data': result}, 201
+        return {'status': "sucesso", 'data': result}, 201
 
-    # You can add the other methods here...
+    # Voce pode adicionar outros metodos aqui
