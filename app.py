@@ -1,8 +1,8 @@
 from flask import Blueprint
 from flask_restful import Api
 
-from src.Categoria import CategoryResource
-from src.Comentario import CommentResource
+from src.Controllers.Categoria import CategoryResource
+from src.Controllers.Comentario import CommentResource
 
 
 api_bp = Blueprint('api', __name__)

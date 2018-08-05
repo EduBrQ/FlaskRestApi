@@ -1,6 +1,7 @@
 from flask import jsonify, request
 from flask_restful import Resource
-from Model import db, Comment, Category, CommentSchema
+from src.Models.Comentario import db, Comment, CommentSchema
+from src.Models.Categoria import Category
 
 comments_schema = CommentSchema(many=True)
 comment_schema = CommentSchema()
