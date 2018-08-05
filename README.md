@@ -49,8 +49,7 @@ Padrão de desenvolvimento restful API - Flask
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = "postgresql://username:password@localhost/database_name"
     ```
-* ### aqui, definimos a configuração que a API estará usando. Também estamos usando o banco 
-      de dados postgreSQL. Se você preferir outro banco de dados, basta modificar o valor de acordo.
+* ### aqui, definimos a configuração que a API estará usando. Também estamos usando o banco de dados postgreSQL. Se você preferir outro banco de dados, basta modificar o valor de acordo.
 
     exemplo: se você quiser usar o SQLite, você deve modificar esta linha como:
     ```
