@@ -1,15 +1,13 @@
 from flask import Blueprint
 from flask_restful import Api
-from resources.Hello import Hello
-from resources.Category import CategoryResource
-from resources.Comment import CommentResource
+
+from src.Categoria import CategoryResource
+from src.Comentario import CommentResource
 
 
 api_bp = Blueprint('api', __name__)
 api = Api(api_bp)
 
-# Routes
-
-api.add_resource(Hello, '/Hello')
-api.add_resource(CategoryResource, '/Category')
-api.add_resource(CommentResource, '/Comment')
+# Rotas
+api.add_resource(CategoryResource, '/Categorias')
+api.add_resource(CommentResource, '/Comentarios')
