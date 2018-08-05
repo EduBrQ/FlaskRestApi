@@ -84,7 +84,7 @@ Padrão de desenvolvimento restful API - Flask
     ``` 
     http://127.0.0.1:5000/api/
     ```
-    Ou teste as rotas /Comentarios e /Categorias  usando o Postman
+    Ou teste as rotas /Comments e /Category  usando o Postman
 	
 * #### Testando
     Navegue ate a pasta Testes, escolha entre a pasta de testes de integração ou unitarios e execute o comando:
