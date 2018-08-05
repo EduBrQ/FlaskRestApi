@@ -49,9 +49,10 @@ Padrão de desenvolvimento restful API - Flask
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = "postgresql://username:password@localhost/database_name"
     ```
-* ### aqui, definimos a configuração que a API estará usando. Também estamos usando o banco de dados             postgreSQL. Se você preferir outro banco de dados, basta modificar o valor de acordo.
+* ### aqui, definimos a configuração que a API estará usando. Também estamos usando o banco 
+      de dados postgreSQL. Se você preferir outro banco de dados, basta modificar o valor de acordo.
 
-    #### exemplo: se você quiser usar o SQLite, você deve modificar esta linha como:
+    exemplo: se você quiser usar o SQLite, você deve modificar esta linha como:
     ```
     SQLALCHEMY_DATABASE_URI = "sqlite:///app.db"
     ```
@@ -84,10 +85,10 @@ Padrão de desenvolvimento restful API - Flask
     ``` 
     http://127.0.0.1:5000/api/
     ```
-    Ou teste as rotas /diabetes e /pressao usando o Postman
+    Ou teste as rotas /Comments e /Category  usando o Postman
 	
 * #### Testando
-    No prompt entre na pasta rest_api_demo e depois na pasta Testes, escolha entre a pasta de testes de integração ou unitarios e execute o comando:
+    Navegue ate a pasta Testes, escolha entre a pasta de testes de integração ou unitarios e execute o comando:
     ```
     (venv)$ python nomeTeste.py
     ```
