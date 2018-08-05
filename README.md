@@ -31,20 +31,7 @@ Padrão de desenvolvimento restful API - Flask
     2. Crie e ative o seu ambiente virtual em python3:
         ```
         $ virtualenv venv
-        $ pip install autoenv
         ```
-
-* #### Variáveis de ​​Ambiente
-    Crie um arquivo .env e adicione o que segue abaixo:
-    ```
-    activate venv/Scripts/activate
-    export SECRET="alguns-caracteres-muito-longos-e-aleatórios - MUDE AO SEU GOSTO"
-    export APP_SETTINGS="development"
-    export DATABASE_URL="postgresql://localhost/flask_api"
-    ```
-
-    Salve o arquivo. Dê um CD para fora do diretório e então o `Autoenv` irá configurar automaticamente as variáveis.
-    Nós agora mantivemos informações confidenciais do mundo exterior! 😄
 
 * #### Instale todas as dependencias
     ```
